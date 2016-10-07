@@ -24,3 +24,27 @@ Things you may want to cover:
 * ...
 # yelp_clone
 
+
+# Holla
+
+A Yelp clone that allows a user to add and review restaurants.
+Click [here](https://holla-yelp-clone.herokuapp.com/)
+
+
+### Database ###
+
+We used a Postgres database so we could easily integrate with Heroku.
+
+
+### Features ###
+* Login with facebook
+* Upload restaurant pictures
+
+
+### Technologies ###
+* Ruby on Rails 5.x
+* Devis
+
+|     | Header Two     |
+| :------------- | :------------- |
+| Item One       | Item Two       |
