@@ -5,10 +5,6 @@ module RestaurantsHelper
     (name.to_s + " " + address.to_s).split(" ").join("+")
   end
 
-  def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :rating, :address)
-  end
-
   def return_stars(input)
     star_full = "1475788591_star-4.png"
     star_three_quarters = "1475788594_star-3.png"
