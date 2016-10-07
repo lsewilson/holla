@@ -15,7 +15,7 @@
     <div class="panel-body">
       <p>Description: <%= @restaurant.description %></p>
       <p>Address: <%= @restaurant.address %></p>
-      <p>Average rating: <%= @restaurant.average_rating %></p>
+      <p>Average rating: <%= @restaurant.average_rating.round(2) %></p>
 
       <!-- <p> <% @stars_array.each do |image| %>
           <%= image_tag(image) %>
@@ -25,6 +25,7 @@
         <%= image_tag(@image_url)%>
       </div>
 
+      <p>
       <% if (current_user && current_user.id == @restaurant.user_id)%>
         <%= link_to "Edit #{@restaurant.name}", edit_restaurant_path(@restaurant) %>
       <% end %>
@@ -32,7 +33,7 @@
       <% if (current_user && current_user.id != @restaurant.user_id)%>
         <%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
       <% end %>
-
+      </p>
       <%= link_to "View reviews", restaurant_reviews_path(@restaurant) %>
 
       <div class="google-maps">
