@@ -30,4 +30,6 @@
   <% if (current_user && current_user.id == @restaurant.user_id)%>
     <%= link_to "Delete listing", restaurant_path(@restaurant), method: :delete %>
   <% end %>
+
+
 </div>
