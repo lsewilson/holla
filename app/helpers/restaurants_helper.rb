@@ -7,10 +7,11 @@ module RestaurantsHelper
 
   def return_stars(input)
     star_full = "1475788591_star-4.png"
-    star_three_quarters = "1475788594_star-3.png"
+    star_three_quarters = "1475788605_star-3.png"
     star_half = "1475788597_star-2.png"
     star_quarter = "1475788601_star-1.png"
     star_empty = "1475788594_star-0.png"
+
 
     array = []
 
