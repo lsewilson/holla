@@ -21,6 +21,9 @@
           <%= image_tag(image) %>
         <% end  %>
       </p> -->
+      <div class="restaurant-image">
+        <%= image_tag(@image_url)%>
+      </div>
 
       <% if (current_user && current_user.id == @restaurant.user_id)%>
         <%= link_to "Edit #{@restaurant.name}", edit_restaurant_path(@restaurant) %>

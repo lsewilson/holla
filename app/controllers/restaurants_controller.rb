@@ -28,6 +28,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @query_string = stringify(@restaurant.name, @restaurant.address)
     @stars_array = return_stars(@restaurant.average_rating)
+    @image_url = @restaurant.image.url(:medium).gsub("s3", "s3-#{ENV['AWS_REGION']}")
   end
 
   def edit
@@ -60,6 +61,6 @@ class RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(:name, :description, :rating, :address, :image)
-  end 
+  end
 
 end
