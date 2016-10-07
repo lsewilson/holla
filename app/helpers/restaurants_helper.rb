@@ -20,6 +20,7 @@ module RestaurantsHelper
     end
 
     input = (input / 0.25).round * 0.25
+    input.round(2)
 
     5.times do
       if input - 1.0 >= 0
